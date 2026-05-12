@@ -1,8 +1,126 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>WEBSITE INFO</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Intro Site</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body, html {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+      z-index: -1;
+    }
+
+    .card {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 360px;
+      padding: 30px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      text-align: center;
+      color: white;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    }
+
+    .name {
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: gold;
+      margin-bottom: 10px;
+    }
+
+    .desc {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .location {
+      margin-bottom: 25px;
+      opacity: 0.9;
+    }
+
+    .icons {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .icons a {
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.18);
+      color: white;
+      text-decoration: none;
+      font-size: 24px;
+      transition: 0.3s ease;
+    }
+
+    .icons a:hover {
+      transform: translateY(-5px) scale(1.1);
+      background: rgba(255, 255, 255, 0.35);
+      color: #ffdd57;
+    }
+  </style>
 </head>
 <body>
-<h1>THIS WEBSITE IS STILL IN TESTING</h1>
+
+  <video class="bg-video" autoplay muted loop>
+    <source src="your-video.mp4" type="video/mp4">
+  </video>
+
+  <div class="overlay"></div>
+
+  <div class="card">
+    <div class="name">Xelbr</div>
+    <div class="desc">Hobbyist Photographer, car enthusiast, editor, gamer, otaku</div>
+    <div class="location">📍 Philippines</div>
+
+    <div class="icons">
+      <a href="https://facebook.com" target="_blank">f</a>
+      <a href="https://instagram.com" target="_blank">ig</a>
+      <a href="https://tiktok.com" target="_blank">t</a>
+      <a href="https://youtube.com" target="_blank">yt</a>
+    </div>
+  </div>
+
+  <script>
+    console.log("Intro site loaded");
+  </script>
 </body>
-<html>
+</html>

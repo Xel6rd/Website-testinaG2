@@ -3,25 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Intro Site</title>
+  <title>Xelbr Intro</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
     }
 
-    body, html {
+    html, body {
       width: 100%;
       height: 100%;
       overflow: hidden;
+      background: #000;
     }
 
     .bg-video {
       position: fixed;
-      top: 0;
-      left: 0;
+      inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -31,7 +37,7 @@
     .overlay {
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.35);
+      background: rgba(0, 0, 0, 0.28);
       z-index: -1;
     }
 
@@ -41,66 +47,100 @@
       left: 50%;
       transform: translate(-50%, -50%);
       width: 360px;
-      padding: 30px;
-      border-radius: 24px;
-      background: rgba(255, 255, 255, 0.14);
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
+      padding: 32px 26px;
       text-align: center;
       color: white;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
     }
 
     .name {
-      font-size: 2.2rem;
-      font-weight: bold;
-      color: gold;
+      font-size: 2.4rem;
+      font-weight: 600;
+      color: #ffd400;
       margin-bottom: 10px;
+      letter-spacing: 0.5px;
     }
 
     .desc {
-      font-size: 1rem;
-      line-height: 1.5;
-      margin-bottom: 20px;
+      font-size: 1.05rem;
+      font-weight: 400;
+      line-height: 1.45;
+      color: rgba(255, 255, 255, 0.96);
+      margin-bottom: 18px;
     }
 
     .location {
-      margin-bottom: 25px;
-      opacity: 0.9;
+      font-size: 1rem;
+      font-weight: 400;
+      margin-bottom: 26px;
+      color: rgba(255, 255, 255, 0.92);
+    }
+
+    .location i {
+      margin-right: 8px;
     }
 
     .icons {
       display: flex;
       justify-content: center;
-      gap: 14px;
+      gap: 12px;
       flex-wrap: wrap;
+      margin-bottom: 12px;
     }
 
     .icons a {
-      width: 52px;
-      height: 52px;
+      width: 48px;
+      height: 48px;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 14px;
-      background: rgba(255, 255, 255, 0.18);
-      color: white;
+      border-radius: 12px;
       text-decoration: none;
-      font-size: 24px;
-      transition: 0.3s ease;
+      color: white;
+      font-size: 22px;
+      background: rgba(255, 255, 255, 0.12);
+      transition: 0.25s ease;
     }
 
     .icons a:hover {
-      transform: translateY(-5px) scale(1.1);
-      background: rgba(255, 255, 255, 0.35);
-      color: #ffdd57;
+      transform: translateY(-4px) scale(1.08);
+      background: rgba(255, 255, 255, 0.25);
+      color: #ffd400;
+    }
+
+    .viewers {
+      position: absolute;
+      bottom: 18px;
+      left: 18px;
+      color: white;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      opacity: 0.95;
+    }
+
+    @media (max-width: 420px) {
+      .card {
+        width: 90%;
+      }
+
+      .name {
+        font-size: 2rem;
+      }
+
+      .desc {
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
 <body>
-
-  <video class="bg-video" autoplay muted loop>
+  <video class="bg-video" autoplay muted loop playsinline>
     <source src="your-video.mp4" type="video/mp4">
   </video>
 
@@ -109,18 +149,26 @@
   <div class="card">
     <div class="name">Xelbr</div>
     <div class="desc">Hobbyist Photographer, car enthusiast, editor, gamer, otaku</div>
-    <div class="location">📍 Philippines</div>
+    <div class="location"><i class="fa-solid fa-location-dot"></i>Philippines</div>
 
     <div class="icons">
-      <a href="https://facebook.com" target="_blank">f</a>
-      <a href="https://instagram.com" target="_blank">ig</a>
-      <a href="https://tiktok.com" target="_blank">t</a>
-      <a href="https://youtube.com" target="_blank">yt</a>
+      <a href="https://roblox.com" target="_blank"><i class="fa-brands fa-roblox"></i></a>
+      <a href="https://steamcommunity.com" target="_blank"><i class="fa-brands fa-steam"></i></a>
+      <a href="https://discord.com" target="_blank"><i class="fa-brands fa-discord"></i></a>
+      <a href="https://tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+
+    <div class="icons">
+      <a href="https://spotify.com" target="_blank"><i class="fa-brands fa-spotify"></i></a>
+      <a href="https://kick.com" target="_blank"><i class="fa-solid fa-k"></i></a>
+      <a href="https://bitcoin.org" target="_blank"><i class="fa-brands fa-bitcoin"></i></a>
+      <a href="https://litecoin.org" target="_blank"><i class="fa-brands fa-bitcoin"></i></a>
     </div>
   </div>
 
-  <script>
-    console.log("Intro site loaded");
-  </script>
+  <div class="viewers"><i class="fa-solid fa-eye"></i> 65</div>
 </body>
 </html>
